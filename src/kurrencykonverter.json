@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Vinayak Patil",
+                "Email": "patilvinu777@gmail.com"
+            }
+        ],
+        "Description": "Convert an amount between currencies, e.g. \"23 dollars inr\". Without a target currency it lists conversions to several common currencies.",
+        "EnabledByDefault": true,
+        "Icon": "view-currency-list",
+        "License": "GPL-3.0-or-later",
+        "Name": "Currency Converter",
+        "Version": "1.0"
+    },
+    "X-Plasma-Runner-Min-Letter-Count": 3
+}
