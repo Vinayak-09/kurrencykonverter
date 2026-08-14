@@ -11,7 +11,8 @@
         "Icon": "view-currency-list",
         "License": "GPL-3.0-or-later",
         "Name": "Currency Converter",
-        "Version": "1.0"
+        "Version": "1.1.0"
     },
+    "X-KDE-ConfigModule": "kf6/krunner/kcms/kcm_krunner_currency",
     "X-Plasma-Runner-Min-Letter-Count": 3
 }

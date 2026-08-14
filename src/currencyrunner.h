@@ -19,7 +19,7 @@ protected:
 
 private:
     KRunner::QueryMatch makeMatch(double amount, const QString &fromCode, const QString &toCode, double result, bool preferred);
-    static QString formatAmount(double value);
+    QString formatAmount(double value) const;
 
     RatesProvider m_rates;
 };

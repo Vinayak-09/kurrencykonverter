@@ -27,3 +27,23 @@ if(NOT DEFINED QT_PLUGIN_INSTALL_DIR)
 endif()
 
 install(TARGETS kurrencykonverter DESTINATION "${QT_PLUGIN_INSTALL_DIR}/kf6/krunner")
+
+# System Settings config page (Search > Plugins > Currency Converter >
+# Configure...), referenced by kurrencykonverter.json's "X-KDE-ConfigModule".
+add_library(kcm_krunner_currency MODULE
+    currencyrunner_config.cpp
+)
+
+target_compile_definitions(kcm_krunner_currency PRIVATE KRUNNER_PLUGIN_NAME="kurrencykonverter")
+
+target_link_libraries(kcm_krunner_currency
+    Qt6::Core
+    Qt6::Widgets
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::KCMUtils
+)
+
+set_target_properties(kcm_krunner_currency PROPERTIES PREFIX "")
+
+install(TARGETS kcm_krunner_currency DESTINATION "${QT_PLUGIN_INSTALL_DIR}/kf6/krunner/kcms")
